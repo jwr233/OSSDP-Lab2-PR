@@ -14,20 +14,21 @@
  * 输出：[0,1,2]
  */
 
-class Solution {
+class Solution13 {
     public void sortColors(int[] nums) {
-        int n = nums.length();
-        int ptr = 0
-        for (int i = 0; i < n; ++i) {
-            if (nums(i) == 0) {
+        //思路：先将所有0移动到最前面，再将所有1移动到0的后面，自然形成顺序
+        int n = nums.length;
+        int ptr = 0;//标记最后一个不是待排序数的位置
+        for (int i = 0; i < n; ++i) {//先将0移到最前面
+            if (nums[i] == 0) {//如果是0，则交换到ptr标记的第一个不是0的位置
                 int temp = nums[i];
                 nums[i] = nums[ptr];
                 nums[ptr] = temp;
                 ++ptr;
             }
         }
-        for {int i = ptr; i < n; ++i} {
-            if (nums[i] == 1) {
+        for (int i = ptr; i < n; ++i) {//然后将1移动到0的后面
+            if (nums[i] == 1) {//如果是1，则交换到0后面第一个不是1的位置
                 int temp = nums[i];
                 nums[i] = nums[ptr];
                 nums[ptr] = temp;
