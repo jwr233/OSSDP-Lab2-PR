@@ -13,7 +13,7 @@
  * 输入：nums = [2,0,1]
  * 输出：[0,1,2]
  */
-
+//添加了一行注释：我最喜欢debug辣！
 class Solution13 {
     public void sortColors(int[] nums) {
         //思路：先将所有0移动到最前面，再将所有1移动到0的后面，自然形成顺序
